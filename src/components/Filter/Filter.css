@@ -1,0 +1,9 @@
+.Filter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.FilterInput {
+  height: 30px;
+  font-size: 18px;
+}
