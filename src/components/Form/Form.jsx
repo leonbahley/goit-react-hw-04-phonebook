@@ -1,6 +1,6 @@
 import { nanoid } from 'nanoid';
 import { useState } from 'react';
-import './Form.css';
+import css from './Form.module.css';
 import PropTypes from 'prop-types';
 
 function Form({ handleSubmit }) {
@@ -21,10 +21,10 @@ function Form({ handleSubmit }) {
   };
 
   return (
-    <form className="Form" onSubmit={onhandleSubmit}>
+    <form className={css.Form} onSubmit={onhandleSubmit}>
       <label htmlFor={nameInputId}>Name</label>
       <input
-        className="FormInput"
+        className={css.FormInput}
         type="text"
         name="name"
         pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -36,7 +36,7 @@ function Form({ handleSubmit }) {
       />
       <label htmlFor={telInputId}>Number</label>
       <input
-        className="FormInput"
+        className={css.FormInput}
         type="tel"
         name="number"
         pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -46,7 +46,7 @@ function Form({ handleSubmit }) {
         value={number}
         onChange={e => setNumber(e.target.value)}
       />
-      <button className="AddBtn" type="submit">
+      <button className={css.AddBtn} type="submit">
         Add contact
       </button>
     </form>

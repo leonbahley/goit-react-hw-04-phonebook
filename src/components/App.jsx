@@ -3,7 +3,8 @@ import Form from './Form/Form';
 import Filter from './Filter/Filter';
 import { nanoid } from 'nanoid';
 import { useEffect } from 'react';
-import ContactList from 'ContactList/ContactList';
+import ContactList from 'components/ContactList/ContactList';
+import css from './App.module.css';
 
 export const App = () => {
   const [contacts, setContacts] = useState(null);
@@ -53,7 +54,7 @@ export const App = () => {
 
   const filteredContacts = getFilteredContacts();
   return (
-    <div className="Phonebook">
+    <div className={css.Phonebook}>
       <h1>Phonebook</h1>
       <Form handleSubmit={handleSubmit} />
       <h2>Contacts</h2>
